@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: yes
+  vars:
+    myvar1: git
+    myvar2: sajan
+  tasks:
+  - name: install git
+    yum: 
+      name: "{{ myvar1 }}"
+      state: present
+  - name: display th myvar1
+    debug:
+      msg: "{{ myvar1 }}"
