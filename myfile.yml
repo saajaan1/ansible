@@ -1,0 +1,6 @@
+---
+  - name: create the file
+    file:
+      path: /home/maha/maha.txt
+      state: touch
+      mode: 0644

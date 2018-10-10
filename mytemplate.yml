@@ -1,0 +1,20 @@
+---
+- hosts: webservers
+  become: yes
+  tasks:
+  - include_tasks: myfile.yml
+  - name: install webservers
+    yum:
+      name: httpd
+      state: present
+    
+  - name: start webservers
+    service:
+      name: httpd
+      state: started
+    
+  - name: copy the dynamic file
+    template:
+      src: myindex.j2
+      dest: /var/www/html/index.html 
+    
