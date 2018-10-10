@@ -1,6 +1,6 @@
 ---
   - name: create the file
     file:
-      path: /home/maha/maha.txt
+      path: /home/sajan/sajan.txt
       state: touch
       mode: 0644
