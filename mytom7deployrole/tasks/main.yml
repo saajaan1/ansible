@@ -1,2 +1,7 @@
 ---
 # tasks file for mytom7deployrole
+- name: SKRLOGIN war in tomcat webapps folder
+  get_url:
+    url: https://s3-ap-southeast-1.amazonaws.com/skrit4iac/SKRLogin-1.0.war
+    dest: /usr/share/tomcat/webapps/
+    force_basic_auth: yes
